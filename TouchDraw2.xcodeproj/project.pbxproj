@@ -1,0 +1,387 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		44A9756C1C39E25C00D2DEFB /* ToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9756B1C39E25C00D2DEFB /* ToolView.swift */; };
+		44A9756E1C39E38500D2DEFB /* ToolVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9756D1C39E38500D2DEFB /* ToolVC.swift */; };
+		44A975711C39E50100D2DEFB /* ColorsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A975701C39E50100D2DEFB /* ColorsVC.swift */; };
+		44A975751C39E58000D2DEFB /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A975741C39E58000D2DEFB /* Buttons.swift */; };
+		44D44C7D1C2B20E9008CFB41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D44C7C1C2B20E9008CFB41 /* AppDelegate.swift */; };
+		44D44C7F1C2B20E9008CFB41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D44C7E1C2B20E9008CFB41 /* ViewController.swift */; };
+		44D44C821C2B20E9008CFB41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44D44C801C2B20E9008CFB41 /* Main.storyboard */; };
+		44D44C841C2B20E9008CFB41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44D44C831C2B20E9008CFB41 /* Assets.xcassets */; };
+		44D44C871C2B20E9008CFB41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44D44C851C2B20E9008CFB41 /* LaunchScreen.storyboard */; };
+		44D44C8F1C2B21DB008CFB41 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D44C8E1C2B21DB008CFB41 /* DrawView.swift */; };
+		44D44C911C2B2215008CFB41 /* TouchSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D44C901C2B2215008CFB41 /* TouchSlider.swift */; };
+		44D44C951C2B2227008CFB41 /* FillStrokeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D44C941C2B2227008CFB41 /* FillStrokeButton.swift */; };
+		44D44C9C1C2B2241008CFB41 /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D44C961C2B2241008CFB41 /* line.png */; };
+		44D44C9D1C2B2241008CFB41 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D44C971C2B2241008CFB41 /* circle.png */; };
+		44D44C9E1C2B2241008CFB41 /* diamond.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D44C981C2B2241008CFB41 /* diamond.png */; };
+		44D44C9F1C2B2241008CFB41 /* scribble.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D44C991C2B2241008CFB41 /* scribble.png */; };
+		44D44CA01C2B2241008CFB41 /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D44C9A1C2B2241008CFB41 /* square.png */; };
+		44D44CA11C2B2241008CFB41 /* triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D44C9B1C2B2241008CFB41 /* triangle.png */; };
+		44F8397D1C3B58DC0069B599 /* DrawData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F8397C1C3B58DC0069B599 /* DrawData.swift */; };
+		44F839891C3B98550069B599 /* undo-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 44F839881C3B98550069B599 /* undo-5.png */; };
+		44F8398B1C3B98D50069B599 /* clearall.png in Resources */ = {isa = PBXBuildFile; fileRef = 44F8398A1C3B98D50069B599 /* clearall.png */; };
+		44F8398D1C3B99260069B599 /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 44F8398C1C3B99260069B599 /* gear.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		44A9756B1C39E25C00D2DEFB /* ToolView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToolView.swift; path = ../ToolView.swift; sourceTree = "<group>"; };
+		44A9756D1C39E38500D2DEFB /* ToolVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToolVC.swift; path = ../ToolVC.swift; sourceTree = "<group>"; };
+		44A975701C39E50100D2DEFB /* ColorsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorsVC.swift; path = ../ColorsVC.swift; sourceTree = "<group>"; };
+		44A975741C39E58000D2DEFB /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		44D44C791C2B20E9008CFB41 /* TouchDraw2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchDraw2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		44D44C7C1C2B20E9008CFB41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		44D44C7E1C2B20E9008CFB41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		44D44C811C2B20E9008CFB41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		44D44C831C2B20E9008CFB41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		44D44C861C2B20E9008CFB41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		44D44C881C2B20E9008CFB41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44D44C8E1C2B21DB008CFB41 /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		44D44C901C2B2215008CFB41 /* TouchSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchSlider.swift; sourceTree = "<group>"; };
+		44D44C941C2B2227008CFB41 /* FillStrokeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillStrokeButton.swift; sourceTree = "<group>"; };
+		44D44C961C2B2241008CFB41 /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
+		44D44C971C2B2241008CFB41 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
+		44D44C981C2B2241008CFB41 /* diamond.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diamond.png; sourceTree = "<group>"; };
+		44D44C991C2B2241008CFB41 /* scribble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scribble.png; sourceTree = "<group>"; };
+		44D44C9A1C2B2241008CFB41 /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = square.png; sourceTree = "<group>"; };
+		44D44C9B1C2B2241008CFB41 /* triangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = triangle.png; sourceTree = "<group>"; };
+		44F8397C1C3B58DC0069B599 /* DrawData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawData.swift; sourceTree = "<group>"; };
+		44F839881C3B98550069B599 /* undo-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "undo-5.png"; sourceTree = "<group>"; };
+		44F8398A1C3B98D50069B599 /* clearall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clearall.png; sourceTree = "<group>"; };
+		44F8398C1C3B99260069B599 /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		44D44C761C2B20E9008CFB41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		44A9756F1C39E39500D2DEFB /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				44A9756D1C39E38500D2DEFB /* ToolVC.swift */,
+				44A9756B1C39E25C00D2DEFB /* ToolView.swift */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		44A975721C39E50E00D2DEFB /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				44A975701C39E50100D2DEFB /* ColorsVC.swift */,
+				44D44C901C2B2215008CFB41 /* TouchSlider.swift */,
+			);
+			name = Colors;
+			sourceTree = "<group>";
+		};
+		44A975731C39E54F00D2DEFB /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				44A975741C39E58000D2DEFB /* Buttons.swift */,
+				44D44C941C2B2227008CFB41 /* FillStrokeButton.swift */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		44D44C701C2B20E9008CFB41 = {
+			isa = PBXGroup;
+			children = (
+				44D44C7B1C2B20E9008CFB41 /* TouchDraw2 */,
+				44D44C7A1C2B20E9008CFB41 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		44D44C7A1C2B20E9008CFB41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				44D44C791C2B20E9008CFB41 /* TouchDraw2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44D44C7B1C2B20E9008CFB41 /* TouchDraw2 */ = {
+			isa = PBXGroup;
+			children = (
+				44D44C801C2B20E9008CFB41 /* Main.storyboard */,
+				44D44C7C1C2B20E9008CFB41 /* AppDelegate.swift */,
+				44D44C8E1C2B21DB008CFB41 /* DrawView.swift */,
+				44D44C7E1C2B20E9008CFB41 /* ViewController.swift */,
+				44F8397C1C3B58DC0069B599 /* DrawData.swift */,
+				44A9756F1C39E39500D2DEFB /* Tools */,
+				44A975721C39E50E00D2DEFB /* Colors */,
+				44A975731C39E54F00D2DEFB /* Buttons */,
+				44D44C831C2B20E9008CFB41 /* Assets.xcassets */,
+				44D44C851C2B20E9008CFB41 /* LaunchScreen.storyboard */,
+				44D44C961C2B2241008CFB41 /* line.png */,
+				44D44C971C2B2241008CFB41 /* circle.png */,
+				44D44C981C2B2241008CFB41 /* diamond.png */,
+				44F8398A1C3B98D50069B599 /* clearall.png */,
+				44F839881C3B98550069B599 /* undo-5.png */,
+				44D44C991C2B2241008CFB41 /* scribble.png */,
+				44F8398C1C3B99260069B599 /* gear.png */,
+				44D44C9A1C2B2241008CFB41 /* square.png */,
+				44D44C9B1C2B2241008CFB41 /* triangle.png */,
+				44D44C881C2B20E9008CFB41 /* Info.plist */,
+			);
+			path = TouchDraw2;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		44D44C781C2B20E9008CFB41 /* TouchDraw2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44D44C8B1C2B20E9008CFB41 /* Build configuration list for PBXNativeTarget "TouchDraw2" */;
+			buildPhases = (
+				44D44C751C2B20E9008CFB41 /* Sources */,
+				44D44C761C2B20E9008CFB41 /* Frameworks */,
+				44D44C771C2B20E9008CFB41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TouchDraw2;
+			productName = TouchDraw2;
+			productReference = 44D44C791C2B20E9008CFB41 /* TouchDraw2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		44D44C711C2B20E9008CFB41 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Paul Vagner";
+				TargetAttributes = {
+					44D44C781C2B20E9008CFB41 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = PT7UDVZFDN;
+					};
+				};
+			};
+			buildConfigurationList = 44D44C741C2B20E9008CFB41 /* Build configuration list for PBXProject "TouchDraw2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 44D44C701C2B20E9008CFB41;
+			productRefGroup = 44D44C7A1C2B20E9008CFB41 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				44D44C781C2B20E9008CFB41 /* TouchDraw2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		44D44C771C2B20E9008CFB41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44F839891C3B98550069B599 /* undo-5.png in Resources */,
+				44D44C9E1C2B2241008CFB41 /* diamond.png in Resources */,
+				44D44C871C2B20E9008CFB41 /* LaunchScreen.storyboard in Resources */,
+				44F8398B1C3B98D50069B599 /* clearall.png in Resources */,
+				44D44C841C2B20E9008CFB41 /* Assets.xcassets in Resources */,
+				44D44C9D1C2B2241008CFB41 /* circle.png in Resources */,
+				44F8398D1C3B99260069B599 /* gear.png in Resources */,
+				44D44CA11C2B2241008CFB41 /* triangle.png in Resources */,
+				44D44C821C2B20E9008CFB41 /* Main.storyboard in Resources */,
+				44D44C9F1C2B2241008CFB41 /* scribble.png in Resources */,
+				44D44CA01C2B2241008CFB41 /* square.png in Resources */,
+				44D44C9C1C2B2241008CFB41 /* line.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		44D44C751C2B20E9008CFB41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44D44C7F1C2B20E9008CFB41 /* ViewController.swift in Sources */,
+				44A975711C39E50100D2DEFB /* ColorsVC.swift in Sources */,
+				44D44C7D1C2B20E9008CFB41 /* AppDelegate.swift in Sources */,
+				44D44C911C2B2215008CFB41 /* TouchSlider.swift in Sources */,
+				44D44C951C2B2227008CFB41 /* FillStrokeButton.swift in Sources */,
+				44A975751C39E58000D2DEFB /* Buttons.swift in Sources */,
+				44A9756C1C39E25C00D2DEFB /* ToolView.swift in Sources */,
+				44F8397D1C3B58DC0069B599 /* DrawData.swift in Sources */,
+				44D44C8F1C2B21DB008CFB41 /* DrawView.swift in Sources */,
+				44A9756E1C39E38500D2DEFB /* ToolVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		44D44C801C2B20E9008CFB41 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44D44C811C2B20E9008CFB41 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		44D44C851C2B20E9008CFB41 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44D44C861C2B20E9008CFB41 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		44D44C891C2B20E9008CFB41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		44D44C8A1C2B20E9008CFB41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		44D44C8C1C2B20E9008CFB41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = TouchDraw2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulvagner.TouchDraw2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		44D44C8D1C2B20E9008CFB41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = TouchDraw2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulvagner.TouchDraw2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		44D44C741C2B20E9008CFB41 /* Build configuration list for PBXProject "TouchDraw2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44D44C891C2B20E9008CFB41 /* Debug */,
+				44D44C8A1C2B20E9008CFB41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44D44C8B1C2B20E9008CFB41 /* Build configuration list for PBXNativeTarget "TouchDraw2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44D44C8C1C2B20E9008CFB41 /* Debug */,
+				44D44C8D1C2B20E9008CFB41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 44D44C711C2B20E9008CFB41 /* Project object */;
+}
