@@ -59,7 +59,6 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
             switch DrawData.mainData().chosenTool {
                 // Scribble
             case 1 :
-                
                 let newScribble = Scribble()
                 newScribble.points.append(touch.locationInView(view))
                 newScribble.strokeColor = DrawData.mainData().strokeColor
