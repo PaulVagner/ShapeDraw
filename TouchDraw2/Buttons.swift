@@ -20,9 +20,7 @@ import UIKit
     }
    
     @IBInspectable var cornerRadius: CGFloat = 0
-    
     @IBInspectable var borderWidth: CGFloat = 0
-    
     @IBInspectable var borderColor: CGColor = UIColor.blackColor().CGColor
     
     }
@@ -39,9 +37,7 @@ import UIKit
     }
     
     @IBInspectable var cornerRadius: CGFloat = 0
-    
     @IBInspectable var borderWidth: CGFloat = 0
-    
     @IBInspectable var borderColor: CGColor = UIColor.whiteColor().CGColor
     
 }

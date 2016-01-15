@@ -51,7 +51,6 @@ class DrawData: NSObject {
     }
     
     var strokeWidth: CGFloat = 0.5
-    
     var chosenTool: Int = 0
     
 }

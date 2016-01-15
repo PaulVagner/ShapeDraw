@@ -22,7 +22,6 @@ class ColorsVC: UIViewController {
     var greenValue: CGFloat = 0.5
     var opacityValue: CGFloat = 0.5
     var blueValue: CGFloat = 0.5
-    
     var isFill: Bool = true
     
     
