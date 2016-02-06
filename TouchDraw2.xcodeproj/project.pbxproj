@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440EEEAB1C6127E10009F32F /* Star.png in Resources */ = {isa = PBXBuildFile; fileRef = 440EEEAA1C6127E10009F32F /* Star.png */; };
 		44A9756C1C39E25C00D2DEFB /* ToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9756B1C39E25C00D2DEFB /* ToolView.swift */; };
 		44A9756E1C39E38500D2DEFB /* ToolVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9756D1C39E38500D2DEFB /* ToolVC.swift */; };
 		44A975711C39E50100D2DEFB /* ColorsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A975701C39E50100D2DEFB /* ColorsVC.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		440EEEAA1C6127E10009F32F /* Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star.png; sourceTree = "<group>"; };
 		44A9756B1C39E25C00D2DEFB /* ToolView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToolView.swift; path = ../ToolView.swift; sourceTree = "<group>"; };
 		44A9756D1C39E38500D2DEFB /* ToolVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToolVC.swift; path = ../ToolVC.swift; sourceTree = "<group>"; };
 		44A975701C39E50100D2DEFB /* ColorsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorsVC.swift; path = ../ColorsVC.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				44D44C851C2B20E9008CFB41 /* LaunchScreen.storyboard */,
 				44D44C961C2B2241008CFB41 /* line.png */,
 				44D44C971C2B2241008CFB41 /* circle.png */,
+				440EEEAA1C6127E10009F32F /* Star.png */,
 				44D44C981C2B2241008CFB41 /* diamond.png */,
 				44F8398A1C3B98D50069B599 /* clearall.png */,
 				44F839881C3B98550069B599 /* undo-5.png */,
@@ -201,6 +204,7 @@
 				44F839891C3B98550069B599 /* undo-5.png in Resources */,
 				44D44C9E1C2B2241008CFB41 /* diamond.png in Resources */,
 				44D44C871C2B20E9008CFB41 /* LaunchScreen.storyboard in Resources */,
+				440EEEAB1C6127E10009F32F /* Star.png in Resources */,
 				44F8398B1C3B98D50069B599 /* clearall.png in Resources */,
 				44D44C841C2B20E9008CFB41 /* Assets.xcassets in Resources */,
 				44D44C9D1C2B2241008CFB41 /* circle.png in Resources */,

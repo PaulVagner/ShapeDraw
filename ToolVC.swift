@@ -22,7 +22,7 @@ class ToolVC: UIViewController {
     
     override var preferredContentSize: CGSize {
         get {
-            return CGSize(width: 300, height: 75)
+            return CGSize(width: 300, height: 175)
         }
         set {
             super.preferredContentSize = newValue

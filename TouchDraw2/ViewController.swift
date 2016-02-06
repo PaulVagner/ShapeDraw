@@ -73,6 +73,8 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
                 startShape(.Rectangle, withTouch: touch)
             case 5 :
                 startShape(.Diamond, withTouch: touch)
+            case 6 :
+                startShape(.Star, withTouch: touch)
                 //Line
             default :
                 let newLine = Line()
