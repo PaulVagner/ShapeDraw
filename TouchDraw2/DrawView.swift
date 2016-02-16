@@ -85,21 +85,46 @@ class DrawView: UIView {
                             
                         case .Star :
                             
-                            var starPath = UIBezierPath()
-                            starPath.moveToPoint(CGPointMake(50, 0))
-                            starPath.addLineToPoint(CGPointMake(61.19, 34.59))
-                            starPath.addLineToPoint(CGPointMake(97.55, 34.55))
-                            starPath.addLineToPoint(CGPointMake(68.11, 55.88))
-                            starPath.addLineToPoint(CGPointMake(79.39, 90.45))
-                            starPath.addLineToPoint(CGPointMake(50, 69.04))
-                            starPath.addLineToPoint(CGPointMake(20.61, 90.45))
-                            starPath.addLineToPoint(CGPointMake(31.89, 55.88))
-                            starPath.addLineToPoint(CGPointMake(2.45, 34.55))
-                            starPath.addLineToPoint(CGPointMake(38.81, 34.59))
-                            starPath.closePath()
-                            UIColor.grayColor().setFill()
-                            starPath.fill()
-
+                            CGContextFillEllipseInRect(context, rect)
+                            
+                            func pointFrom(angle: CGFloat, radius: CGFloat, offset: CGPoint) -> CGPoint {
+                                
+                                return CGPointMake(radius * cos(angle) + offset.x, radius * sin(angle) + offset.y)
+                            }
+                            
+                            func starPathInRect(rect: CGRect) -> UIBezierPath {
+                                let path = UIBezierPath()
+                                let starExtrusion: CGFloat = 30.0
+                                let center = CGPointMake(rect.width / 2.0, rect.height / 2.0)
+                                let pointsOnStar = 5 + arc4random() % 10
+                                var angle: CGFloat = -CGFloat(M_PI / 2.0)
+                                let angleIncrement = CGFloat(M_PI * 2.0 / Double(pointsOnStar))
+                                let radius = rect.width / 2.0
+                                
+                                var firstPoint = true
+                                
+                                for _ in 1...pointsOnStar {
+                                    
+                                    let point = pointFrom(angle, radius: radius, offset: center)
+                                    let nextPoint = pointFrom(angle + angleIncrement, radius: radius, offset: center)
+                                    let midPoint = pointFrom(angle + angleIncrement / 2.0, radius: starExtrusion, offset: center)
+                                    
+                                    
+                                    if firstPoint {
+                                        firstPoint = false
+                                        path.moveToPoint(point)
+                                    }
+                                    
+                                    path.addLineToPoint(midPoint)
+                                    path.addLineToPoint(nextPoint)
+                                    
+                                    angle += angleIncrement
+                                }
+                                
+                                path.closePath()
+                                CGContextFillPath(context)
+                                return path
+                            }
                             
                         }
                     }
@@ -177,21 +202,46 @@ class DrawView: UIView {
                             CGContextStrokePath(context)
                             
                         case .Star :
-                            var starPath = UIBezierPath()
-                            starPath.moveToPoint(CGPointMake(50, 0))
-                            starPath.addLineToPoint(CGPointMake(61.19, 34.59))
-                            starPath.addLineToPoint(CGPointMake(97.55, 34.55))
-                            starPath.addLineToPoint(CGPointMake(68.11, 55.88))
-                            starPath.addLineToPoint(CGPointMake(79.39, 90.45))
-                            starPath.addLineToPoint(CGPointMake(50, 69.04))
-                            starPath.addLineToPoint(CGPointMake(20.61, 90.45))
-                            starPath.addLineToPoint(CGPointMake(31.89, 55.88))
-                            starPath.addLineToPoint(CGPointMake(2.45, 34.55))
-                            starPath.addLineToPoint(CGPointMake(38.81, 34.59))
-                            starPath.closePath()
-                            UIColor.grayColor().setFill()
-                            starPath.fill()
-
+                            CGContextFillEllipseInRect(context, rect)
+                            
+                            func pointFrom(angle: CGFloat, radius: CGFloat, offset: CGPoint) -> CGPoint {
+                                
+                                return CGPointMake(radius * cos(angle) + offset.x, radius * sin(angle) + offset.y)
+                            }
+                            
+                            func starPathInRect(rect: CGRect) -> UIBezierPath {
+                                let path = UIBezierPath()
+                                let starExtrusion: CGFloat = 30.0
+                                let center = CGPointMake(rect.width / 2.0, rect.height / 2.0)
+                                let pointsOnStar = 5 + arc4random() % 10
+                                var angle: CGFloat = -CGFloat(M_PI / 2.0)
+                                let angleIncrement = CGFloat(M_PI * 2.0 / Double(pointsOnStar))
+                                let radius = rect.width / 2.0
+                                
+                                var firstPoint = true
+                                
+                                for _ in 1...pointsOnStar {
+                                    
+                                    let point = pointFrom(angle, radius: radius, offset: center)
+                                    let nextPoint = pointFrom(angle + angleIncrement, radius: radius, offset: center)
+                                    let midPoint = pointFrom(angle + angleIncrement / 2.0, radius: starExtrusion, offset: center)
+                                    
+                                    
+                                    if firstPoint {
+                                        firstPoint = false
+                                        path.moveToPoint(point)
+                                    }
+                                    
+                                    path.addLineToPoint(midPoint)
+                                    path.addLineToPoint(nextPoint)
+                                    
+                                    angle += angleIncrement
+                                }
+                                
+                                path.closePath()
+                                CGContextFillPath(context)
+                                return path
+                            }
 
                         }
                         
