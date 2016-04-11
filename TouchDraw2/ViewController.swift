@@ -10,6 +10,20 @@ import UIKit
 
 class ViewController: UIViewController, UIPopoverPresentationControllerDelegate {
     
+    @IBAction func SavePic(sender: AnyObject) {
+
+        
+//        UIGraphicsBeginImageContext(mainImageView.bounds.size)
+//        mainImageView.image?.drawInRect(CGRect(x: 0, y: 0,
+//            width: mainImageView.frame.size.width, height: mainImageView.frame.size.height))
+//        let image = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//        
+//        let activity = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+//        presentViewController(activity, animated: true, completion: nil)
+    
+    }
+    
     //creates the button action outlet
     @IBAction func undo(sender: AnyObject) {
         
@@ -150,3 +164,4 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     }
     
 }
+

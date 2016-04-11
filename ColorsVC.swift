@@ -32,6 +32,7 @@ class ColorsVC: UIViewController {
     @IBOutlet weak var opacityLabelValue: UILabel!
     @IBOutlet weak var fsButton: fillStrokeButton!
     
+    
     @IBOutlet weak var redSlider: TouchSlider!
     @IBAction func redSliderMoved(sender: TouchSlider) {
         redValue = CGFloat(sender.value)
