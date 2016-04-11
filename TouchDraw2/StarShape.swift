@@ -10,10 +10,9 @@ import Foundation
 import UIKit
 import QuartzCore
 
-
+class StarShape {
 
 let context = UIGraphicsGetCurrentContext()
-
 
 func pointFrom(angle: CGFloat, radius: CGFloat, offset: CGPoint) -> CGPoint {
     
@@ -53,3 +52,9 @@ func starPathInRect(rect: CGRect) -> UIBezierPath {
     CGContextFillPath(context)
     return path
     }
+    
+}
+
+
+
+

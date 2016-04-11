@@ -37,7 +37,7 @@ class ColorsVC: UIViewController {
         redValue = CGFloat(sender.value)
         displayColors()
         redLabelValue.text = "Red" + " \(redValue)"
-//        print("redSliderValue is \(redValue)")
+        print("redSliderValue is \(redValue.description)")
     }
     
     @IBOutlet weak var greenSlider: TouchSlider!
