@@ -31,7 +31,7 @@ class DrawView: UIView {
                         let width = end.x - start.x
                         let height = end.y - start.y
                         
-                        let rect = CGRect(x: start.x, y: start.y, width: width, height: height)
+                        var rect = CGRect(x: start.x, y: start.y, width: width, height: height)
                         
                         switch shape.type ?? .Rectangle {
                             
@@ -85,7 +85,13 @@ class DrawView: UIView {
                             
                         case .Star :
                             
-                            StarShape()
+                            let maxWH = rect.width > rect.height ? rect.width : rect.height
+                            
+                            rect.size.width = maxWH
+                            rect.size.height = maxWH
+                            
+                            let star = StarShape()
+                            star.starPathInRect(context, rect: rect)
 //                            CGContextDrawLayerInRect(context, rect, StarShape())
                             
                         }
@@ -111,7 +117,7 @@ class DrawView: UIView {
                         let width = end.x - start.x
                         let height = end.y - start.y
                         
-                        let rect = CGRect(x: start.x, y: start.y, width: width, height: height)
+                        var rect = CGRect(x: start.x, y: start.y, width: width, height: height)
                         
                         switch shape.type ?? .Rectangle {
                             
@@ -163,8 +169,16 @@ class DrawView: UIView {
                             // fills the shape on the inside
                             CGContextStrokePath(context)
                             
-                        default : ""
+                        case .Star:
                             
+                            let maxWH = rect.width > rect.height ? rect.width : rect.height
+                            
+                            rect.size.width = maxWH
+                            rect.size.height = maxWH
+                            
+                            
+                            let star = StarShape()
+                            star.starPathInRect(context, rect: rect, stroke: true)
                             
                         }
                         
