@@ -31,7 +31,7 @@ class DrawView: UIView {
                         let width = end.x - start.x
                         let height = end.y - start.y
                         
-                        let rect = CGRect(x: start.x, y: start.y, width: width, height: height)
+                        var rect = CGRect(x: start.x, y: start.y, width: width, height: height)
                         
                         switch shape.type ?? .Rectangle {
                             
@@ -86,44 +86,15 @@ class DrawView: UIView {
                         case .Star :
                             CGContextFillEllipseInRect(context, rect)
                             
-                            func pointFrom(angle: CGFloat, radius: CGFloat, offset: CGPoint) -> CGPoint {
-                                
-                                return CGPointMake(radius * cos(angle) + offset.x, radius * sin(angle) + offset.y)
-                            }
+                            let maxWH = rect.width > rect.height ? rect.width : rect.height
                             
-                            func starPathInRect(rect: CGRect) -> UIBezierPath {
-                                let path = UIBezierPath()
-                                let starExtrusion: CGFloat = 30.0
-                                let center = CGPointMake(rect.width / 2.0, rect.height / 2.0)
-                                let pointsOnStar = 5 + arc4random() % 10
-                                var angle: CGFloat = -CGFloat(M_PI / 2.0)
-                                let angleIncrement = CGFloat(M_PI * 2.0 / Double(pointsOnStar))
-                                let radius = rect.width / 2.0
-                                
-                                var firstPoint = true
-                                
-                                for _ in 1...pointsOnStar {
-                                    
-                                    let point = pointFrom(angle, radius: radius, offset: center)
-                                    let nextPoint = pointFrom(angle + angleIncrement, radius: radius, offset: center)
-                                    let midPoint = pointFrom(angle + angleIncrement / 2.0, radius: starExtrusion, offset: center)
-           
-                                    
-                                    if firstPoint {
-                                        firstPoint = false
-                                        path.moveToPoint(point)
-                                    }
-                                    
-                                    path.addLineToPoint(midPoint)
-                                    path.addLineToPoint(nextPoint)
-                                    
-                                    angle += angleIncrement
-                                }
-                                
-                                path.closePath()
-                                CGContextFillPath(context)
-                                return path
-                            }
+                            rect.size.width = maxWH
+                            rect.size.height = maxWH
+                            
+                            let star = StarShape()
+                            star.starPathInRect(context, rect: rect)
+//                            CGContextDrawLayerInRect(context, rect, StarShape())
+                            
                         }
                     }
                     
@@ -147,7 +118,7 @@ class DrawView: UIView {
                         let width = end.x - start.x
                         let height = end.y - start.y
                         
-                        let rect = CGRect(x: start.x, y: start.y, width: width, height: height)
+                        var rect = CGRect(x: start.x, y: start.y, width: width, height: height)
                         
                         switch shape.type ?? .Rectangle {
                             
@@ -199,6 +170,7 @@ class DrawView: UIView {
                             // fills the shape on the inside
                             CGContextStrokePath(context)
                             
+<<<<<<< HEAD
                         case .Star :
                             CGContextFillEllipseInRect(context, rect)
 //                            func pointFrom(angle: CGFloat, radius: CGFloat, offset: CGPoint) -> CGPoint {
@@ -243,6 +215,19 @@ class DrawView: UIView {
 //                                return path
 //                            }
 
+=======
+                        case .Star:
+                            
+                            let maxWH = rect.width > rect.height ? rect.width : rect.height
+                            
+                            rect.size.width = maxWH
+                            rect.size.height = maxWH
+                            
+                            
+                            let star = StarShape()
+                            star.starPathInRect(context, rect: rect, stroke: true)
+                            
+>>>>>>> newfeatures
                         }
                         
                     } else {

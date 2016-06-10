@@ -36,15 +36,15 @@ class ColorsVC: UIViewController {
     @IBAction func redSliderMoved(sender: TouchSlider) {
         redValue = CGFloat(sender.value)
         displayColors()
-        redLabelValue.text = "Red" + " \(redValue)"
-//        print("redSliderValue is \(redValue)")
+        redLabelValue.text = "Red" + " \(Int(255 * redValue))"
+        print("redSliderValue is \(redValue.description)")
     }
     
     @IBOutlet weak var greenSlider: TouchSlider!
     @IBAction func greenSliderMoved(sender: TouchSlider) {
         greenValue = CGFloat(sender.value)
         displayColors()
-        greenLabelValue.text = "Green" + " \(greenValue)"
+        greenLabelValue.text = "Green" + " \(Int(255 * greenValue))"
 //        print("greenSliderValue is \(greenValue)")
         
     }
@@ -53,7 +53,7 @@ class ColorsVC: UIViewController {
     @IBAction func blueSliderMoved(sender: TouchSlider) {
         blueValue = CGFloat(sender.value)
         displayColors()
-        blueLabelValue.text = "Blue" + " \(blueValue)"
+        blueLabelValue.text = "Blue" + " \(Int(255 * blueValue))"
 //        print("blueSliderValue is \(blueValue)")
     }
     
@@ -61,7 +61,7 @@ class ColorsVC: UIViewController {
     @IBAction func opacitySliderMoved(sender: TouchSlider) {
         opacityValue = CGFloat(sender.value)
         displayColors()
-        opacityLabelValue.text = "Opacity" + " \(opacityValue)"
+        opacityLabelValue.text = "Opacity" + " \(Int(100 * opacityValue))"
 //        print("opacitySliderValue is \(opacityValue)")
     }
     
@@ -70,7 +70,7 @@ class ColorsVC: UIViewController {
         
         DrawData.mainData().strokeWidth = CGFloat(sender.value)
 //        print("strokeValue is \(DrawData.mainData().strokeWidth)")
-        strokeLabelValue.text = "Stroke Width" + " \(strokeSlider.value)"
+        strokeLabelValue.text = "Stroke Width" + " \(Int(10 * strokeSlider.value))"
     }
     
     @IBAction func fsButtonTapped(sender: fillStrokeButton) {
