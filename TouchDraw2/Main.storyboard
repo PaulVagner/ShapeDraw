@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XdV-3p-L6a">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Tiy-sT-dfM">
+            <objects>
+                <viewController id="XdV-3p-L6a" customClass="ViewController" customModule="TouchDraw2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CMV-Ys-MfK"/>
+                        <viewControllerLayoutGuide type="bottom" id="7aF-VB-VU1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c45-sf-qGS" customClass="DrawView" customModule="TouchDraw2" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txn-uf-mRt" customClass="Buttons" customModule="TouchDraw2" customModuleProvider="target">
+                                <rect key="frame" x="314" y="20" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="6ca-h6-Guk"/>
+                                    <constraint firstAttribute="height" constant="80" id="DD7-Ys-p77"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
+                                <state key="normal" title="Button" image="gear.png"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="pGb-iF-AIg" kind="popoverPresentation" popoverAnchorView="Txn-uf-mRt" id="28b-qW-0RM">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="058-eJ-M1q" customClass="fillStrokeButton" customModule="TouchDraw2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="20" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="JjR-dc-nz4"/>
+                                    <constraint firstAttribute="height" constant="80" id="TFd-8P-3Kz"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="circleInset">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iconInset">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="outerColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="innerColor">
+                                        <color key="value" red="1" green="0.034578598420000002" blue="0.14930722769999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Fck-Sa-t2o" kind="popoverPresentation" popoverAnchorView="058-eJ-M1q" id="Ija-1e-BQH">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qe6-5H-wjy" customClass="Buttons" customModule="TouchDraw2" customModuleProvider="target">
+                                <rect key="frame" x="110" y="20" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="690-K5-Mt4"/>
+                                    <constraint firstAttribute="height" constant="80" id="Ovh-jI-L4A"/>
+                                </constraints>
+                                <state key="normal" image="clearall.png"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clear:" destination="XdV-3p-L6a" eventType="touchUpInside" id="1Nm-WQ-SoA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KeS-jT-Yca" customClass="Buttons" customModule="TouchDraw2" customModuleProvider="target">
+                                <rect key="frame" x="224" y="20" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="F6H-cf-Miw"/>
+                                    <constraint firstAttribute="height" constant="80" id="NPK-dm-S6w"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="3" minY="4" maxX="3" maxY="8"/>
+                                <state key="normal" title="Button" image="undo-5.png"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="undo:" destination="XdV-3p-L6a" eventType="touchUpInside" id="Bae-RP-1ld"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Txn-uf-mRt" firstAttribute="trailing" secondItem="c45-sf-qGS" secondAttribute="trailingMargin" id="9X0-Me-p3d"/>
+                            <constraint firstItem="qe6-5H-wjy" firstAttribute="leading" secondItem="058-eJ-M1q" secondAttribute="trailing" constant="10" id="Wcu-6c-ghX"/>
+                            <constraint firstItem="KeS-jT-Yca" firstAttribute="top" secondItem="CMV-Ys-MfK" secondAttribute="bottom" id="YM8-Zh-2hO"/>
+                            <constraint firstItem="058-eJ-M1q" firstAttribute="leading" secondItem="c45-sf-qGS" secondAttribute="leadingMargin" id="ZN1-St-0Gs"/>
+                            <constraint firstItem="Txn-uf-mRt" firstAttribute="top" secondItem="CMV-Ys-MfK" secondAttribute="bottom" id="b6r-LF-sz1"/>
+                            <constraint firstItem="058-eJ-M1q" firstAttribute="top" secondItem="CMV-Ys-MfK" secondAttribute="bottom" id="msq-nJ-iRB"/>
+                            <constraint firstItem="Txn-uf-mRt" firstAttribute="leading" secondItem="KeS-jT-Yca" secondAttribute="trailing" constant="10" id="yFL-wC-9qu"/>
+                            <constraint firstItem="qe6-5H-wjy" firstAttribute="top" secondItem="CMV-Ys-MfK" secondAttribute="bottom" id="ybx-TJ-psv"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="fsButton" destination="058-eJ-M1q" id="3tP-ze-nJZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1PY-wc-JTi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="492" y="213"/>
+        </scene>
+        <!--ColorsVC-->
+        <scene sceneID="809-r6-l6h">
+            <objects>
+                <viewController id="Fck-Sa-t2o" customClass="ColorsVC" customModule="TouchDraw2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kCG-tO-Jkd"/>
+                        <viewControllerLayoutGuide type="bottom" id="zHW-fh-PyZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="STm-aE-lLN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jl5-tS-gIt" customClass="TouchSlider" customModule="TouchDraw2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="80" width="374" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="XyR-8c-df2"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                                        <color key="value" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="handleColor">
+                                        <color key="value" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="greenSliderMoved:" destination="Fck-Sa-t2o" eventType="valueChanged" id="JJB-3j-uoR"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tnl-5x-Wlk" customClass="TouchSlider" customModule="TouchDraw2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="140" width="374" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="r2R-ho-34i"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="handleColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="blueSliderMoved:" destination="Fck-Sa-t2o" eventType="valueChanged" id="mXy-m9-DAq"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XvD-nc-Ffw" customClass="TouchSlider" customModule="TouchDraw2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="200" width="374" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="0eu-Sw-EXT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="handleColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="opacitySliderMoved:" destination="Fck-Sa-t2o" eventType="valueChanged" id="DGF-ER-euI"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8VL-Zo-pKp" customClass="TouchSlider" customModule="TouchDraw2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="260" width="374" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="XmQ-2m-JzB"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="handleColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="strokeSliderMoved:" destination="Fck-Sa-t2o" eventType="valueChanged" id="eiz-Fu-Ofx"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9R-XL-ncR" customClass="fillStrokeButton" customModule="TouchDraw2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="676" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Bhz-LL-33S"/>
+                                    <constraint firstAttribute="height" constant="40" id="yAQ-3X-WNw"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="circleInset">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iconInset">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="fsButtonTapped:" destination="Fck-Sa-t2o" eventType="touchUpInside" id="hHR-OX-Cl9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8r-he-V3K">
+                                <rect key="frame" x="20" y="50" width="374" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="gke-uU-S2c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.034578598420000002" blue="0.14930722769999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Btp-7E-ist">
+                                <rect key="frame" x="20" y="170" width="374" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="AhD-3K-Pr2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opacity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iO-c0-hku">
+                                <rect key="frame" x="20" y="230" width="374" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="6bJ-Gl-gbL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKY-eq-pbT">
+                                <rect key="frame" x="20" y="110" width="374" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="lgo-cA-Qnn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Line Width" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJl-o0-wfB">
+                                <rect key="frame" x="20" y="290" width="374" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="PCN-2h-ETt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SyO-2E-BNN" customClass="TouchSlider" customModule="TouchDraw2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="20" width="374" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="yLK-4m-08W"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                                        <color key="value" red="1" green="0.034578598420000002" blue="0.14930722769999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="handleColor">
+                                        <color key="value" red="1" green="0.034578598420000002" blue="0.14930722769999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="redSliderMoved:" destination="Fck-Sa-t2o" eventType="valueChanged" id="r1K-Ie-wac"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIT-C4-HYk" customClass="Buttons" customModule="TouchDraw2" customModuleProvider="target">
+                                <rect key="frame" x="354" y="676" width="40" height="40"/>
+                                <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="PPq-nk-Ln9"/>
+                                    <constraint firstAttribute="width" constant="40" id="uyJ-a8-DUy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="OK"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="close:" destination="Fck-Sa-t2o" eventType="touchUpInside" id="hx0-Sz-vj5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tnl-5x-Wlk" firstAttribute="leading" secondItem="STm-aE-lLN" secondAttribute="leadingMargin" id="3Mh-vf-dcv"/>
+                            <constraint firstItem="Jl5-tS-gIt" firstAttribute="leading" secondItem="STm-aE-lLN" secondAttribute="leadingMargin" id="48y-KZ-tk6"/>
+                            <constraint firstItem="tnl-5x-Wlk" firstAttribute="top" secondItem="qKY-eq-pbT" secondAttribute="bottom" constant="10" id="5Re-Lt-dKj"/>
+                            <constraint firstItem="qKY-eq-pbT" firstAttribute="trailing" secondItem="STm-aE-lLN" secondAttribute="trailingMargin" id="7K5-LB-zRB"/>
+                            <constraint firstItem="l8r-he-V3K" firstAttribute="leading" secondItem="STm-aE-lLN" secondAttribute="leadingMargin" id="8yL-19-MiD"/>
+                            <constraint firstItem="LJl-o0-wfB" firstAttribute="trailing" secondItem="STm-aE-lLN" secondAttribute="trailingMargin" id="9dd-ma-hDZ"/>
+                            <constraint firstItem="v9R-XL-ncR" firstAttribute="leading" secondItem="STm-aE-lLN" secondAttribute="leadingMargin" id="DWl-Ws-WjQ"/>
+                            <constraint firstItem="8VL-Zo-pKp" firstAttribute="leading" secondItem="STm-aE-lLN" secondAttribute="leadingMargin" id="E5g-Gp-pNK"/>
+                            <constraint firstItem="SyO-2E-BNN" firstAttribute="leading" secondItem="STm-aE-lLN" secondAttribute="leading" constant="20" id="FxR-E8-P9r"/>
+                            <constraint firstItem="Btp-7E-ist" firstAttribute="trailing" secondItem="STm-aE-lLN" secondAttribute="trailingMargin" id="GkZ-t8-ZNF"/>
+                            <constraint firstItem="zHW-fh-PyZ" firstAttribute="top" secondItem="v9R-XL-ncR" secondAttribute="bottom" constant="20" id="KUG-Zz-n66"/>
+                            <constraint firstItem="LJl-o0-wfB" firstAttribute="leading" secondItem="STm-aE-lLN" secondAttribute="leadingMargin" id="KaP-XN-Qn5"/>
+                            <constraint firstItem="5iO-c0-hku" firstAttribute="top" secondItem="XvD-nc-Ffw" secondAttribute="bottom" constant="10" id="LsD-Ao-IcF"/>
+                            <constraint firstItem="5iO-c0-hku" firstAttribute="trailing" secondItem="STm-aE-lLN" secondAttribute="trailingMargin" id="QTt-ba-cFt"/>
+                            <constraint firstItem="YIT-C4-HYk" firstAttribute="trailing" secondItem="STm-aE-lLN" secondAttribute="trailingMargin" id="SBL-pW-SYr"/>
+                            <constraint firstItem="qKY-eq-pbT" firstAttribute="leading" secondItem="STm-aE-lLN" secondAttribute="leadingMargin" id="Y4n-eM-Fhf"/>
+                            <constraint firstItem="SyO-2E-BNN" firstAttribute="top" secondItem="kCG-tO-Jkd" secondAttribute="bottom" id="ZKg-Xm-2Ak"/>
+                            <constraint firstItem="l8r-he-V3K" firstAttribute="top" secondItem="SyO-2E-BNN" secondAttribute="bottom" constant="10" id="b58-4i-bo3"/>
+                            <constraint firstItem="8VL-Zo-pKp" firstAttribute="top" secondItem="5iO-c0-hku" secondAttribute="bottom" constant="10" id="cJs-fK-WnK"/>
+                            <constraint firstItem="XvD-nc-Ffw" firstAttribute="leading" secondItem="STm-aE-lLN" secondAttribute="leadingMargin" id="dis-CR-wci"/>
+                            <constraint firstItem="l8r-he-V3K" firstAttribute="trailing" secondItem="STm-aE-lLN" secondAttribute="trailingMargin" id="eTK-Kj-2wj"/>
+                            <constraint firstItem="5iO-c0-hku" firstAttribute="leading" secondItem="STm-aE-lLN" secondAttribute="leadingMargin" id="fLc-s0-HqO"/>
+                            <constraint firstItem="XvD-nc-Ffw" firstAttribute="trailing" secondItem="STm-aE-lLN" secondAttribute="trailingMargin" id="gCe-RI-leI"/>
+                            <constraint firstItem="Jl5-tS-gIt" firstAttribute="top" secondItem="l8r-he-V3K" secondAttribute="bottom" constant="10" id="iGN-4h-rM1"/>
+                            <constraint firstItem="Btp-7E-ist" firstAttribute="top" secondItem="tnl-5x-Wlk" secondAttribute="bottom" constant="10" id="ifO-cr-zhg"/>
+                            <constraint firstItem="zHW-fh-PyZ" firstAttribute="top" secondItem="YIT-C4-HYk" secondAttribute="bottom" constant="20" id="k90-Kr-x0z"/>
+                            <constraint firstItem="qKY-eq-pbT" firstAttribute="top" secondItem="Jl5-tS-gIt" secondAttribute="bottom" constant="10" id="liH-UZ-tgF"/>
+                            <constraint firstItem="8VL-Zo-pKp" firstAttribute="trailing" secondItem="STm-aE-lLN" secondAttribute="trailingMargin" id="mIs-Q2-slf"/>
+                            <constraint firstAttribute="trailing" secondItem="SyO-2E-BNN" secondAttribute="trailing" constant="20" id="toA-jM-V9R"/>
+                            <constraint firstItem="XvD-nc-Ffw" firstAttribute="top" secondItem="Btp-7E-ist" secondAttribute="bottom" constant="10" id="tsj-bZ-8sr"/>
+                            <constraint firstItem="LJl-o0-wfB" firstAttribute="top" secondItem="8VL-Zo-pKp" secondAttribute="bottom" constant="10" id="wac-aN-yxV"/>
+                            <constraint firstItem="Jl5-tS-gIt" firstAttribute="trailing" secondItem="STm-aE-lLN" secondAttribute="trailingMargin" id="wfC-Mh-7Rk"/>
+                            <constraint firstItem="tnl-5x-Wlk" firstAttribute="trailing" secondItem="STm-aE-lLN" secondAttribute="trailingMargin" id="wvE-Ez-LnX"/>
+                            <constraint firstItem="Btp-7E-ist" firstAttribute="leading" secondItem="STm-aE-lLN" secondAttribute="leadingMargin" id="ytw-FZ-jYi"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="blueLabelValue" destination="Btp-7E-ist" id="d6w-nd-d6s"/>
+                        <outlet property="blueSlider" destination="tnl-5x-Wlk" id="uWc-u3-Xhj"/>
+                        <outlet property="fsButton" destination="v9R-XL-ncR" id="KsL-i2-Hd9"/>
+                        <outlet property="greenLabelValue" destination="qKY-eq-pbT" id="zcY-t5-car"/>
+                        <outlet property="greenSlider" destination="Jl5-tS-gIt" id="D12-ae-eVB"/>
+                        <outlet property="opacityLabelValue" destination="5iO-c0-hku" id="JVK-F7-RBZ"/>
+                        <outlet property="opacitySlider" destination="XvD-nc-Ffw" id="nsf-R2-mbx"/>
+                        <outlet property="redLabelValue" destination="l8r-he-V3K" id="aUe-PD-JfR"/>
+                        <outlet property="redSlider" destination="SyO-2E-BNN" id="aQr-gO-z8c"/>
+                        <outlet property="strokeSlider" destination="8VL-Zo-pKp" id="c4W-nc-P2q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ezl-p7-Nz0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="484" y="1067"/>
+        </scene>
+        <!--ToolVC-->
+        <scene sceneID="iW3-Va-hzj">
+            <objects>
+                <viewController id="pGb-iF-AIg" customClass="ToolVC" customModule="TouchDraw2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aO7-xw-nWs"/>
+                        <viewControllerLayoutGuide type="bottom" id="6o4-KE-6Iw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cg4-my-IET">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXT-o1-2kd">
+                                <rect key="frame" x="252" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NSx-Gp-Yfw"/>
+                                    <constraint firstAttribute="width" constant="30" id="VsV-xs-7lQ"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="square.png"/>
+                                <connections>
+                                    <action selector="chooseTool:" destination="pGb-iF-AIg" eventType="touchUpInside" id="X2s-SM-MzJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWn-Q9-AIo" customClass="Buttons" customModule="TouchDraw2" customModuleProvider="target">
+                                <rect key="frame" x="364" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="TyZ-4w-e7V"/>
+                                    <constraint firstAttribute="width" constant="30" id="cVM-4r-hTP"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="3" minY="3" maxX="3" maxY="5"/>
+                                <state key="normal" title="Button" image="Star.png">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="chooseTool:" destination="pGb-iF-AIg" eventType="touchUpInside" id="4ni-ic-jKS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqP-QF-gqA">
+                                <rect key="frame" x="308" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="InU-xR-f2d"/>
+                                    <constraint firstAttribute="width" constant="30" id="T3E-OF-CxA"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="diamond.png"/>
+                                <connections>
+                                    <action selector="chooseTool:" destination="pGb-iF-AIg" eventType="touchUpInside" id="hZa-zy-m8P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nft-OX-NDG">
+                                <rect key="frame" x="131" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="EqJ-Sr-VT3"/>
+                                    <constraint firstAttribute="height" constant="30" id="Rmi-Gi-vTS"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="circle.png"/>
+                                <connections>
+                                    <action selector="chooseTool:" destination="pGb-iF-AIg" eventType="touchUpInside" id="LuK-ce-RXe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BuS-Rs-BKB" customClass="Buttons" customModule="TouchDraw2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="vM2-NP-hoI"/>
+                                    <constraint firstAttribute="width" constant="30" id="z4a-by-y71"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="line.png"/>
+                                <connections>
+                                    <action selector="chooseTool:" destination="pGb-iF-AIg" eventType="touchUpInside" id="zW9-NW-wrw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fa-SR-e2Y">
+                                <rect key="frame" x="75" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OKM-vr-NTS"/>
+                                    <constraint firstAttribute="width" constant="30" id="o8p-Me-ine"/>
+                                </constraints>
+                                <state key="normal" image="scribble.png"/>
+                                <connections>
+                                    <action selector="chooseTool:" destination="pGb-iF-AIg" eventType="touchUpInside" id="2UZ-r7-TZD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dww-TV-yTL">
+                                <rect key="frame" x="192" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="NTF-Fd-Juf"/>
+                                    <constraint firstAttribute="height" constant="30" id="g5n-Wf-8AD"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="triangle.png"/>
+                                <connections>
+                                    <action selector="chooseTool:" destination="pGb-iF-AIg" eventType="touchUpInside" id="dlc-ge-hls"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.65771812080000003" green="0.0" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="TWn-Q9-AIo" firstAttribute="leading" secondItem="uqP-QF-gqA" secondAttribute="trailing" constant="26" id="7XO-rE-NW4"/>
+                            <constraint firstItem="TWn-Q9-AIo" firstAttribute="trailing" secondItem="Cg4-my-IET" secondAttribute="trailingMargin" id="CC3-Pn-iiG"/>
+                            <constraint firstItem="uqP-QF-gqA" firstAttribute="leading" secondItem="AXT-o1-2kd" secondAttribute="trailing" constant="26" id="Fvc-kh-2i0"/>
+                            <constraint firstItem="8fa-SR-e2Y" firstAttribute="leading" secondItem="BuS-Rs-BKB" secondAttribute="trailing" constant="25" id="NS1-8q-PrM"/>
+                            <constraint firstItem="AXT-o1-2kd" firstAttribute="top" secondItem="aO7-xw-nWs" secondAttribute="bottom" id="Rdz-ez-8oC"/>
+                            <constraint firstItem="Dww-TV-yTL" firstAttribute="top" secondItem="aO7-xw-nWs" secondAttribute="bottom" id="cUG-XT-F3L"/>
+                            <constraint firstItem="uqP-QF-gqA" firstAttribute="top" secondItem="aO7-xw-nWs" secondAttribute="bottom" id="et6-XK-QkI"/>
+                            <constraint firstItem="nft-OX-NDG" firstAttribute="leading" secondItem="8fa-SR-e2Y" secondAttribute="trailing" constant="26" id="g9P-0f-zrT"/>
+                            <constraint firstItem="BuS-Rs-BKB" firstAttribute="top" secondItem="aO7-xw-nWs" secondAttribute="bottom" id="hQ8-0K-y8h"/>
+                            <constraint firstItem="TWn-Q9-AIo" firstAttribute="top" secondItem="aO7-xw-nWs" secondAttribute="bottom" id="iPi-ef-lqN"/>
+                            <constraint firstItem="nft-OX-NDG" firstAttribute="top" secondItem="aO7-xw-nWs" secondAttribute="bottom" id="m6H-JR-ead"/>
+                            <constraint firstItem="8fa-SR-e2Y" firstAttribute="top" secondItem="aO7-xw-nWs" secondAttribute="bottom" id="oky-Gh-hAE"/>
+                            <constraint firstItem="AXT-o1-2kd" firstAttribute="leading" secondItem="Dww-TV-yTL" secondAttribute="trailing" constant="30" id="pD5-m1-nfp"/>
+                            <constraint firstItem="BuS-Rs-BKB" firstAttribute="leading" secondItem="Cg4-my-IET" secondAttribute="leadingMargin" id="uHr-FC-Bhi"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t2R-x5-h4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="943" y="213"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Star.png" width="100" height="95"/>
+        <image name="circle.png" width="84" height="84"/>
+        <image name="clearall.png" width="512" height="512"/>
+        <image name="diamond.png" width="84" height="84"/>
+        <image name="gear.png" width="128" height="128"/>
+        <image name="line.png" width="84" height="84"/>
+        <image name="scribble.png" width="84" height="84"/>
+        <image name="square.png" width="84" height="84"/>
+        <image name="triangle.png" width="83" height="84"/>
+        <image name="undo-5.png" width="512" height="512"/>
+    </resources>
+</document>
